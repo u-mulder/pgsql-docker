@@ -1,0 +1,16 @@
+version: '3'
+
+volumes:
+  postgres: ~
+
+services:
+    db:
+        image: postgres:15.2-alpine
+        volumes:
+            - "postgres:/var/lib/postgresql/data"
+        environment:
+            POSTGRES_DB: um
+            POSTGRES_USER: um
+            POSTGRES_PASSWORD: um
+        ports:
+            - "54329:5432"
